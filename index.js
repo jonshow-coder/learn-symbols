@@ -26,3 +26,22 @@ letItRun(Symbol.for("run"))
 // Symbol("run") === Symbol("run") --> false
 
 console.log(person[ID_SYMBOL])
+
+// object
+const people = {
+	frankMark: {
+		name: "frank mark",
+		age: 18
+	},
+	luseMark: {
+		name: "luse Mark",
+		age: 15
+	},
+	petterLand: {
+		name: "petter Land",
+		age: 20
+	}
+}
+
+const peopleKeys = Object.keys(people);
+const list = peopleKeys.map(key => console.log(people[key].name, people[key].age))
