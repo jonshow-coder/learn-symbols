@@ -1,12 +1,12 @@
 // first symbol variable
-const idSymbol = Symbol("id");
+const ID_SYMBOL = Symbol("id");
 
 // using symbol in object's properties
 const person = {
 	id: 0,
 	name: "frank mark",
 	age: 18,
-	[idSymbol]: 1000
+	[ID_SYMBOL]: 1000
 }
 // some use to symbol
 const RUN = Symbol.for("run");
@@ -24,3 +24,5 @@ letItRun("run");
 letItRun(Symbol.for("run"))
 // but if i do this 
 // Symbol("run") === Symbol("run") --> false
+
+console.log(person[ID_SYMBOL])
